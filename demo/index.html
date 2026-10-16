@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>教务系统 - 静态演示</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>教务系统（静态演示）</h1>
+    <nav>
+      <button id="tab-dashboard" class="active">概览</button>
+      <button id="tab-students">学生</button>
+      <button id="tab-courses">课程</button>
+      <button id="tab-schedule">课表</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard" class="tab-content">
+      <h2>系统概览</h2>
+      <div class="cards">
+        <div class="card">学生数<br/><span id="count-students">0</span></div>
+        <div class="card">课程数<br/><span id="count-courses">0</span></div>
+      </div>
+    </section>
+
+    <section id="students" class="tab-content hidden">
+      <h2>学生管理</h2>
+      <form id="add-student-form">
+        <input id="student-name" placeholder="姓名" required />
+        <input id="student-id" placeholder="学号" required />
+        <button type="submit">添加学生</button>
+      </form>
+      <input id="student-search" placeholder="搜索姓名或学号" />
+      <table id="students-table">
+        <thead><tr><th>学号</th><th>姓名</th><th>操作</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="courses" class="tab-content hidden">
+      <h2>课程管理</h2>
+      <form id="add-course-form">
+        <input id="course-name" placeholder="课程名" required />
+        <input id="course-code" placeholder="课程代码" required />
+        <button type="submit">添加课程</button>
+      </form>
+      <table id="courses-table">
+        <thead><tr><th>代码</th><th>课程</th><th>操作</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="schedule" class="tab-content hidden">
+      <h2>简易课表</h2>
+      <div id="schedule-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>这是一个纯静态的演示（前端模拟数据），仅用于展示交互与布局。</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
